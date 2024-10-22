@@ -1,0 +1,79 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: #e0f7fa;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.quiz-container {
+    background: white;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.question-header h2 {
+    color: #00796b;
+    margin: 0;
+}
+
+.question-header p {
+    font-size: 18px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.option {
+    background: #e0f2f1;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    border: 2px solid transparent;
+}
+
+.option:hover {
+    background: #b2dfdb;
+}
+
+.option.selected {
+    background: #00796b;
+    color: white;
+    border-color: #004d40;
+}
+
+.quiz-container::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: 100px;
+    height: 100px;
+    background: url('plant.png') no-repeat center center;
+    background-size: contain;
+}
+
+.quiz-container::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    right: -30px;
+    width: 100px;
+    height: 100px;
+    background: url('bick.png') no-repeat center center;
+    background-size: contain;
+}
